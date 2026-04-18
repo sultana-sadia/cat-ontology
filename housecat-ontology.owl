@@ -126,7 +126,15 @@
 
     <!-- http://www.semanticweb.org/sadiasultana/ontologies/2026/1/untitled-ontology-2#Cat -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/sadiasultana/ontologies/2026/1/untitled-ontology-2#Cat"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/sadiasultana/ontologies/2026/1/untitled-ontology-2#Cat">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sadiasultana/ontologies/2026/1/untitled-ontology-2#hasOwner"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sadiasultana/ontologies/2026/1/untitled-ontology-2#Owner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -142,7 +150,7 @@
     <!-- http://www.semanticweb.org/sadiasultana/ontologies/2026/1/untitled-ontology-2#Food -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/sadiasultana/ontologies/2026/1/untitled-ontology-2#Food">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sadiasultana/ontologies/2026/1/untitled-ontology-2#HouseCat"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sadiasultana/ontologies/2026/1/untitled-ontology-2#Owner"/>
     </owl:Class>
     
 
@@ -151,7 +159,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/sadiasultana/ontologies/2026/1/untitled-ontology-2#HouseCat">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sadiasultana/ontologies/2026/1/untitled-ontology-2#Cat"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sadiasultana/ontologies/2026/1/untitled-ontology-2#Owner"/>
     </owl:Class>
     
 
